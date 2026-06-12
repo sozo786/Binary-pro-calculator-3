@@ -4,11 +4,9 @@ workflows:
     environment:
       java: 11
     scripts:
-            - name: Install Gradle
+      - name: Build with Gradle
         script: |
-          brew install gradle
-            - name: Build APK
-        script: |
-          gradle assembleDebug
+          gradle wrapper
+          ./gradlew assembleDebug
     artifacts:
-            - app/build/outputs/apk/debug/app-debug.apk
+      - app/build/outputs/apk/debug/app-debug.apk
