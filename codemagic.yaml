@@ -2,7 +2,7 @@ workflows:
   android:
     name: Android Build
     environment:
-      java: 11
+      java: 17
     scripts:
       - name: Build with Gradle
         script: |
